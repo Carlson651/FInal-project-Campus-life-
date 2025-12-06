@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campus Life — Wireframe Demo</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <a href="/" aria-label="Campus Life Home">Campus Life</a>
+    </div>
+
+    <!-- menu toggle (mobile) -->
+    <button id="menuToggle"
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="mainNav"
+            aria-label="Open navigation menu">
+      ☰
+    </button>
+
+    <nav id="mainNav" class="main-nav" role="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="#/" >Home</a></li>
+        <li><a href="#/events">Events</a></li>
+        <li><a href="#/clubs">Clubs</a></li>
+        <li><a href="#/help">Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="app" class="app" role="main">
+    <!-- Sidebar (desktop) / hidden on mobile -->
+    <aside id="sidebar" class="sidebar" role="complementary" aria-label="Filters and related">
+      <h2>Filters</h2>
+      <div class="filters">
+        <button type="button">All</button>
+        <button type="button">Events</button>
+        <button type="button">Clubs</button>
+      </div>
+
+      <h3>Related</h3>
+      <ul class="related">
+        <li><a href="#">Help desk</a></li>
+        <li><a href="#">Room bookings</a></li>
+      </ul>
+    </aside>
+
+    <!-- Search + results -->
+    <section class="main-col">
+      <section id="searchSection" aria-labelledby="searchTitle" class="search-section">
+        <h1 id="searchTitle">Campus Life</h1>
+
+        <form id="searchForm" role="search" aria-label="Search campus content">
+          <label for="q" class="visually-hidden">Search</label>
+          <div class="search-row">
+            <input id="q" name="q" type="search" placeholder="Search events, clubs..." aria-label="Search datasets or events">
+            <button id="searchBtn" type="submit">Search</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="results" class="results" aria-live="polite">
+        <!-- placeholder cards -->
+        <article class="card" tabindex="0">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="meta">
+            <h3>Student Chess Club</h3>
+            <p>Weekly meetups and friendly tournaments.</p>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="meta">
+            <h3>Library Hours</h3>
+            <p>Open 8am - 10pm weekdays, study spaces available.</p>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="meta">
+            <h3>Health & Wellbeing</h3>
+            <p>Support services and counselling.</p>
+          </div>
+        </article>
+
+        <article class="card" tabindex="0">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="meta">
+            <h3>Sports Fixtures</h3>
+            <p>Upcoming matches and booking info.</p>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="site-footer">
+    <p>&copy; <span id="year"></span> Campus Life Project</p>
+  </footer>
+
+  <script type="module" src="src/main.js" defer></script>
+</body>
+</html>
